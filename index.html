@@ -4,25 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cestování po městech světa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background-color: #e3f2fd; }
-        h1 { color: #1976d2; text-align: center; }
-        .container { max-width: 600px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        ul { margin: 10px 0; }
+        body { background-color: #e3f2fd; }
+        .hero { background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%); color: white; padding: 100px 0; }
+        .city-card { margin-bottom: 20px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Cestování po městech světa</h1>
-        <p>Objevte úžasná města planety.</p>
-        <h2>Populární města:</h2>
-        <ul>
-            <li>Paříž, Francie</li>
-            <li>Tokio, Japonsko</li>
-            <li>New York, USA</li>
-            <li>Řím, Itálie</li>
-        </ul>
-        <p>Každé město má svou jedinečnou atmosféru a památky.</p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Cestování po městech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Domů</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cities">Města</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tips">Tipy</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero text-center">
+        <div class="container">
+            <h1 class="display-4">Objevte města světa</h1>
+            <p class="lead">Cestujte a poznávejte kulturu různých destinací.</p>
+            <a href="#cities" class="btn btn-light btn-lg">Prozkoumat</a>
+        </div>
+    </section>
+
+    <div class="container my-5">
+        <section id="cities">
+            <h2>Populární města</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card city-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Paříž, Francie</h5>
+                            <p class="card-text">Město lásky s Eiffelovou věží a Louvre.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card city-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tokio, Japonsko</h5>
+                            <p class="card-text">Moderní metropole s tradiční kulturou.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card city-card">
+                        <div class="card-body">
+                            <h5 class="card-title">New York, USA</h5>
+                            <p class="card-text">Velkoměsto s ikonickými památkami.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card city-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Řím, Itálie</h5>
+                            <p class="card-text">Historické město s Koloseem a Vatikánem.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card city-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Barcelona, Španělsko</h5>
+                            <p class="card-text">Umělecké město s Gaudího architekturou.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card city-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Sydney, Austrálie</h5>
+                            <p class="card-text">Přístavní město s operním domem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips" class="my-5">
+            <h2>Cestovní tipy</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Zkontrolujte vízové požadavky.</li>
+                <li class="list-group-item">Naučte se základní fráze v místním jazyce.</li>
+                <li class="list-group-item">Vyzkoušejte místní kuchyni.</li>
+                <li class="list-group-item">Buďte respektující k místní kultuře.</li>
+            </ul>
+            <div class="alert alert-info">
+                <strong>Lokalizace:</strong> Informace v češtině. Pro anglické průvodce použijte TripAdvisor.
+            </div>
+        </section>
     </div>
+
+    <footer class="bg-primary text-white text-center py-3">
+        <p>&copy; 2026 Cestování po městech. Pro milovníky cestování.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
