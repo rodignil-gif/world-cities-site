@@ -1,111 +1,236 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cestování po městech světa</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Mech a Popel - Indie Hra</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="#">Cestování po městech</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Domů</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#cities">Města</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#tips">Tipy</a></li>
-                </ul>
-            </div>
+    <!-- Particle background -->
+    <div id="particles"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">⚙️ Mech a Popel</div>
+            <ul class="nav-menu">
+                <li><a href="#about">O Hře</a></li>
+                <li><a href="#story">Příběh</a></li>
+                <li><a href="#characters">Postavy</a></li>
+                <li><a href="#gameplay">Mechaniky</a></li>
+                <li><a href="#download">Stažení</a></li>
+            </ul>
         </div>
     </nav>
 
-    <section id="home" class="hero text-center">
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Mech a Popel</h1>
+            <p class="hero-subtitle">Vejdi do věčného cyklu smrti a znovuzrození</p>
+            <div class="neon-underline"></div>
+            <button class="cta-button">Vstup do Popela</button>
+        </div>
+        <div class="hero-particles"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
         <div class="container">
-            <h1 class="display-4">Objevte města světa</h1>
-            <p class="lead">Cestujte a poznávejte kulturu různých destinací.</p>
-            <a href="#cities" class="btn btn-light btn-lg">Prozkoumat</a>
+            <h2>O Hře</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">🔥</div>
+                    <h3>Katastrofa</h3>
+                    <p>Po velkém požáru pradávný les žije v cyklech smrti a znovuzrození. Energie popela propletuje každou cestu.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">👤</div>
+                    <h3>Elira</h3>
+                    <p>Ticha stopařka se schopností absorbovat popelné ozvěny mrtvých strážců. Hledá cestu k Srdci Kořenů.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">🎮</div>
+                    <h3>Roguelike</h3>
+                    <p>Každý běh je nový. Procedurální generace, permadeath a meta-progrese vytváří nekončenou replayabilitu.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <div class="container my-5">
-        <section id="cities">
-            <h2>Populární města</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card city-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Paříž, Francie</h5>
-                            <p class="card-text">Město lásky s Eiffelovou věží a Louvre.</p>
-                        </div>
-                    </div>
+    <!-- Story Section -->
+    <section class="story" id="story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-text">
+                    <h2>Příběh</h2>
+                    <p>Elira ztratila svou matku v plamenech katastrofy. Nebo aspoň tak vypadá. Pomocí artefaktu zvaného Maska Následovatele se potápí hlouběji do lesa, kde čeří zvláštní energie - popelné ozvěny mrtvých strážců. S každou cestou je jí jasnější, že katastrofa není přírodní, ale plánovaná. Někdo nebo něco zaprášilo věčný cyklus ohně.</p>
+                    <p>Cíl: dosáhnout Srdce Kořenů a pochopit původ hrozby. Snad tam najde odpovědi. Nebo snad jen nové otázky.</p>
                 </div>
-                <div class="col-md-6">
-                    <div class="card city-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Tokio, Japonsko</h5>
-                            <p class="card-text">Moderní metropole s tradiční kulturou.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card city-card">
-                        <div class="card-body">
-                            <h5 class="card-title">New York, USA</h5>
-                            <p class="card-text">Velkoměsto s ikonickými památkami.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card city-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Řím, Itálie</h5>
-                            <p class="card-text">Historické město s Koloseem a Vatikánem.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card city-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Barcelona, Španělsko</h5>
-                            <p class="card-text">Umělecké město s Gaudího architekturou.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card city-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Sydney, Austrálie</h5>
-                            <p class="card-text">Přístavní město s operním domem.</p>
+                <div class="story-graphic">
+                    <div class="neon-box">
+                        <div class="neon-text">VĚČNÝ CYKLUS</div>
+                        <div class="cycle-diagram">
+                            <div class="cycle-item">Tma</div>
+                            <div class="cycle-arrow">→</div>
+                            <div class="cycle-item">Popel</div>
+                            <div class="cycle-arrow">→</div>
+                            <div class="cycle-item">Růst</div>
+                            <div class="cycle-arrow">→</div>
+                            <div class="cycle-item">Oheň</div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="tips" class="my-5">
-            <h2>Cestovní tipy</h2>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Zkontrolujte vízové požadavky.</li>
-                <li class="list-group-item">Naučte se základní fráze v místním jazyce.</li>
-                <li class="list-group-item">Vyzkoušejte místní kuchyni.</li>
-                <li class="list-group-item">Buďte respektující k místní kultuře.</li>
-            </ul>
-            <div class="alert alert-info">
-                <strong>Lokalizace:</strong> Informace v češtině. Pro anglické průvodce použijte TripAdvisor.
+    <!-- Characters Section -->
+    <section class="characters" id="characters">
+        <div class="container">
+            <h2>Klíčové Postavy</h2>
+            <div class="characters-grid">
+                <div class="character-card">
+                    <div class="char-icon">🗡️</div>
+                    <h3>Elira</h3>
+                    <p class="char-role">Hlavní Hrdinka</p>
+                    <p class="char-desc">Mlčící lovkyně s hákem z popela. Rychlá, mrštná, schopná absorbovat popelné ozvěny a učit se nové dovednosti z každého padlého strážce.</p>
+                </div>
+                <div class="character-card">
+                    <div class="char-icon">🦌</div>
+                    <h3>Varn</h3>
+                    <p class="char-role">Duch-Průvodce</p>
+                    <p class="char-desc">Ambivalentní průvodce mezi životy a smrtí. Místy pomáhá Eliře, místy ji vede do pasti. Reprezentuje přírodu, která si vezme zpět, co potřebuje.</p>
+                </div>
+                <div class="character-card">
+                    <div class="char-icon">🔧</div>
+                    <h3>Sovař</h3>
+                    <p class="char-role">Slepý Kováč</p>
+                    <p class="char-desc">Tajemný prodejce upgradů v bezpečném sektoru. Vidí pomocí zvuku a intuice. Dává Eliře vylepšení výměnou za popelné ozvěny.</p>
+                </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <footer class="bg-primary text-white text-center py-3">
-        <p>&copy; 2026 Cestování po městech. Pro milovníky cestování.</p>
+    <!-- Enemies Section -->
+    <section class="enemies" id="enemies">
+        <div class="container">
+            <h2>Nepřátelé a Bossové</h2>
+            <div class="enemies-grid">
+                <div class="enemy-item">
+                    <div class="enemy-icon">⚔️</div>
+                    <h4>Uhlové Rytíře</h4>
+                    <p class="enemy-type">Běžný Nepřítel</p>
+                </div>
+                <div class="enemy-item">
+                    <div class="enemy-icon">🗡️</div>
+                    <h4>Chuchvalci Popela</h4>
+                    <p class="enemy-type">Běžný Nepřítel</p>
+                </div>
+                <div class="enemy-item">
+                    <div class="enemy-icon">🪨</div>
+                    <h4>Živé Totemy</h4>
+                    <p class="enemy-type">Běžný Nepřítel</p>
+                </div>
+                <div class="enemy-item boss">
+                    <div class="enemy-icon">👑</div>
+                    <h4>Matka Popela</h4>
+                    <p class="enemy-type">Boss - 1. Střetnutí</p>
+                </div>
+                <div class="enemy-item boss">
+                    <div class="enemy-icon">🌳</div>
+                    <h4>Zpěvný Kořen</h4>
+                    <p class="enemy-type">Boss - 2. Střetnutí</p>
+                </div>
+                <div class="enemy-item boss">
+                    <div class="enemy-icon">🔮</div>
+                    <h4>Král Dutých Parohů</h4>
+                    <p class="enemy-type">Boss - Finální</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gameplay Section -->
+    <section class="gameplay" id="gameplay">
+        <div class="container">
+            <h2>Herní Mechaniky</h2>
+            <div class="mechanics-grid">
+                <div class="mechanic-box">
+                    <h3>🎲 Procedurální Generace</h3>
+                    <p>Každý běh vygeneruje novou topologii lesa. Žádné dva běhy nejsou stejné.</p>
+                </div>
+                <div class="mechanic-box">
+                    <h3>💀 Permadeath</h3>
+                    <p>Smrt znamená návrat na start. Ale meta-progrese zůstává. Učíš se při každém běhu.</p>
+                </div>
+                <div class="mechanic-box">
+                    <h3>⚡ Absorbice Ozvěn</h3>
+                    <p>Porážením nepřátel získáš popelné ozvěny. Kombinuj je pro nové schopnosti.</p>
+                </div>
+                <div class="mechanic-box">
+                    <h3>📈 Meta-Progrese</h3>
+                    <p>Odemykej permanentní vylepšení a artefakty z bossů. Příběh se postupně odhaluje.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biomes Section -->
+    <section class="biomes" id="biomes">
+        <div class="container">
+            <h2>Světy a Biomy</h2>
+            <div class="biomes-grid">
+                <div class="biome-card">
+                    <div class="biome-name">Popelný Les</div>
+                    <p>Počáteční biom plný mrtvých stromů a popela</p>
+                </div>
+                <div class="biome-card">
+                    <div class="biome-name">Říční Koridor</div>
+                    <p>Cesta podél zahasnuté řeky, nebezpečí pod vodou</p>
+                </div>
+                <div class="biome-card">
+                    <div class="biome-name">Mechy a Vřesoviště</div>
+                    <p>Splétané původní vegetace a hlubokých stínech</p>
+                </div>
+                <div class="biome-card">
+                    <div class="biome-name">Chrám Kořenů</div>
+                    <p>Starověké ruiny plné energetických bodů</p>
+                </div>
+                <div class="biome-card">
+                    <div class="biome-name">Propast Plamenů</div>
+                    <p>Podsvětský sektor s aktivním ohněm a horkými vzdušnými proudy</p>
+                </div>
+                <div class="biome-card">
+                    <div class="biome-name">Srdce Lesa</div>
+                    <p>Finální lokace, pulzující energie a osud</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container center">
+            <h2>Připraven vstoupit?</h2>
+            <p>Mech a Popel čeká na průzkumce, kteří se nebojí neznáma.</p>
+            <button class="cta-button large">Wishlist na Steamu</button>
+            <p class="release-info">Vydání Q4 2026</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Mech a Popel. Indie Game Development.</p>
+            <div class="social-links">
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://discord.com" target="_blank">Discord</a>
+                <a href="https://patreon.com" target="_blank">Patreon</a>
+            </div>
+        </div>
     </footer>
-
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
